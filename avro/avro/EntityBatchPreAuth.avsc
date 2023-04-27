@@ -9,9 +9,7 @@
       "type": {
         "type": "enum",
         "name": "KinesisRecordType",
-        "symbols": [
-          "ENTITIES"
-        ],
+        "symbols": ["ENTITIES"],
         "doc": "What is the type of this kinesis record"
       },
       "default": "ENTITIES"
@@ -43,10 +41,7 @@
     },
     {
       "name": "deviceId",
-      "type": [
-        "null",
-        "string"
-      ],
+      "type": ["null", "string"],
       "default": null,
       "doc": "The unique device identifier that this entity was written on"
     },
@@ -90,10 +85,7 @@
                     },
                     {
                       "name": "image",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
+                      "type": ["null", "string"],
                       "default": null,
                       "doc": "The UUID of the image associated with this flagged activity event this metadata"
                     },
@@ -266,9 +258,7 @@
                       "type": {
                         "type": "enum",
                         "name": "VideoType",
-                        "symbols": [
-                          "YOUTUBE"
-                        ],
+                        "symbols": ["YOUTUBE"],
                         "doc": "Where is this youtube video sourced from"
                       }
                     },
@@ -300,19 +290,13 @@
                             },
                             {
                               "name": "adminPolicyId",
-                              "type": [
-                                "null",
-                                "long"
-                              ],
+                              "type": ["null", "long"],
                               "doc": "Reference to an admin video policy causing the block",
                               "default": null
                             },
                             {
                               "name": "adminFilterId",
-                              "type": [
-                                "null",
-                                "long"
-                              ],
+                              "type": ["null", "long"],
                               "doc": "Reference to a filter inside of admin video policy causing the block",
                               "default": null
                             }
@@ -350,28 +334,19 @@
             },
             {
               "name": "faviconUrl",
-              "type": [
-                "null",
-                "string"
-              ],
+              "type": ["null", "string"],
               "default": null,
               "doc": "The favicon url associated with this entity"
             },
             {
               "name": "title",
-              "type": [
-                "null",
-                "string"
-              ],
+              "type": ["null", "string"],
               "default": null,
               "doc": "The title associated with this entity"
             },
             {
               "name": "tabId",
-              "type": [
-                "null",
-                "int"
-              ],
+              "type": ["null", "int"],
               "default": null,
               "doc": "The tabId that this entity came from"
             },
@@ -386,10 +361,7 @@
                   "fields": [
                     {
                       "name": "isNew",
-                      "type": [
-                        "null",
-                        "boolean"
-                      ],
+                      "type": ["null", "boolean"],
                       "default": null,
                       "doc": "Whether this metadata item is new"
                     },
@@ -400,17 +372,14 @@
                     },
                     {
                       "name": "originalUrl",
-                      "type": [
-                        "null",
-                        "string"
-                      ],
+                      "type": ["null", "string"],
                       "doc": "Original URL of the blocked entity",
                       "default": null
                     },
                     {
                       "name": "reason",
                       "type": [
-                        "null", 
+                        "null",
                         {
                           "type": "enum",
                           "name": "BlockedSiteReasonType",
@@ -435,55 +404,37 @@
                     },
                     {
                       "name": "adminPolicyId",
-                      "type": [
-                        "null", 
-                        "long"
-                      ],
+                      "type": ["null", "long"],
                       "doc": "Reference to an admin policy causing the block, reason should be ADMIN_SITE_FILTER or ADMIN_SITE_CATEGORY_FILTER",
                       "default": null
                     },
                     {
                       "name": "adminFilterId",
-                      "type": [
-                        "null", 
-                        "long"
-                      ],
+                      "type": ["null", "long"],
                       "doc": "Reference to a filter inside of admin policy causing the block, reason should be ADMIN_SITE_FILTER or ADMIN_SITE_CATEGORY_FILTER",
                       "default": null
                     },
                     {
                       "name": "parentFilterId",
-                      "type": [
-                        "null", 
-                        "long"
-                      ],
+                      "type": ["null", "long"],
                       "doc": "Reference to a parent policy causing the block, reason should be PARENT_SITE_FILTER, PARENT_PAUSE or PARENT_SCHEDULED_PAUSE",
                       "default": null
                     },
                     {
                       "name": "x3ReportPublicId",
-                      "type": [
-                        "null", 
-                        "string"
-                      ],
+                      "type": ["null", "string"],
                       "doc": "Reference to an X3 report causing the block, reason should be X3_REPORT (UUID string)",
                       "default": null
                     },
                     {
                       "name": "teacherSceneId",
-                      "type": [
-                        "null", 
-                        "long"
-                      ],
+                      "type": ["null", "long"],
                       "doc": "Reference to a teacher scene causing the block, reason should be TEACHER_SCENE",
                       "default": null
                     },
                     {
                       "name": "teacherSceneFilterId",
-                      "type": [
-                        "null", 
-                        "long"
-                      ],
+                      "type": ["null", "long"],
                       "doc": "Reference to a specific filter of teacher scene causing the block, reason should be TEACHER_SCENE",
                       "default": null
                     }
@@ -518,10 +469,7 @@
                     },
                     {
                       "name": "lastSubmissionTimeMs",
-                      "type": [
-                        "null",
-                        "long"
-                      ],
+                      "type": ["null", "long"],
                       "default": null,
                       "doc": "If present, represents the last time this viewing was sent to Kinesis"
                     }
@@ -532,10 +480,7 @@
             },
             {
               "name": "isNew",
-              "type": [
-                "null",
-                "boolean"
-              ],
+              "type": ["null", "boolean"],
               "default": null,
               "doc": "Represents whether this entity has been submitted to Kinesis before"
             },
@@ -565,10 +510,7 @@
             },
             {
               "name": "isLocked",
-              "type": [
-                "null",
-                "boolean"
-              ],
+              "type": ["null", "boolean"],
               "default": null,
               "doc": "Represents whether the entity was generated in a locked state (GG4T)"
             },
@@ -614,10 +556,7 @@
             },
             {
               "name": "isProxy",
-              "type": [
-                "null",
-                "boolean"
-              ],
+              "type": ["null", "boolean"],
               "default": null,
               "doc": "Whether this entity represents a proxy website"
             },

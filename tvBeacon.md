@@ -13,6 +13,3 @@ The code also sets up event listeners to listen for a specific message from the 
 Finally, the code sets up another event listener to listen for clicks on the document, and if the click did not originate from the iframe element, it sends a message to the chrome.runtime and removes the click event listener.
 
 It is not clear what the purpose of this code is without more context.
-
-
-

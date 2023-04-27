@@ -1,53 +1,64 @@
-! function(e) {
-    var t = {};
+!(function (e) {
+  var t = {};
 
-    function r(n) {
-        if (t[n]) return t[n].exports;
-        var o = t[n] = {
-            i: n,
-            l: !1,
-            exports: {}
-        };
-        return e[n].call(o.exports, o, o.exports, r), o.l = !0, o.exports
-    }
-    r.m = e, r.c = t, r.d = function(e, t, n) {
-        r.o(e, t) || Object.defineProperty(e, t, {
-            configurable: !1,
-            enumerable: !0,
-            get: n
-        })
-    }, r.r = function(e) {
-        Object.defineProperty(e, "__esModule", {
-            value: !0
-        })
-    }, r.n = function(e) {
-        var t = e && e.__esModule ? function() {
-            return e.default
-        } : function() {
-            return e
-        };
-        return r.d(t, "a", t), t
-    }, r.o = function(e, t) {
-        return Object.prototype.hasOwnProperty.call(e, t)
-    }, r.p = "", r(r.s = 833)
-}({
-    575: function(e, t, r) {
-        "use strict";
-        Object.defineProperty(t, "__esModule", {
-            value: !0
+  function r(n) {
+    if (t[n]) return t[n].exports;
+    var o = (t[n] = {
+      i: n,
+      l: !1,
+      exports: {},
+    });
+    return e[n].call(o.exports, o, o.exports, r), (o.l = !0), o.exports;
+  }
+  (r.m = e),
+    (r.c = t),
+    (r.d = function (e, t, n) {
+      r.o(e, t) ||
+        Object.defineProperty(e, t, {
+          configurable: !1,
+          enumerable: !0,
+          get: n,
         });
-        t.SET_SCHEME = "SET_SCHEME"
-    },
-    833: function(e, t, r) {
-        "use strict";
-        var n = r(575);
-        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({
-            matches: e
-        }) => {
-            chrome.runtime.sendMessage({
-                type: n.SET_SCHEME,
-                scheme: e ? "dark" : "light"
-            })
-        })
-    }
+    }),
+    (r.r = function (e) {
+      Object.defineProperty(e, "__esModule", {
+        value: !0,
+      });
+    }),
+    (r.n = function (e) {
+      var t =
+        e && e.__esModule
+          ? function () {
+              return e.default;
+            }
+          : function () {
+              return e;
+            };
+      return r.d(t, "a", t), t;
+    }),
+    (r.o = function (e, t) {
+      return Object.prototype.hasOwnProperty.call(e, t);
+    }),
+    (r.p = ""),
+    r((r.s = 833));
+})({
+  575: function (e, t, r) {
+    "use strict";
+    Object.defineProperty(t, "__esModule", {
+      value: !0,
+    });
+    t.SET_SCHEME = "SET_SCHEME";
+  },
+  833: function (e, t, r) {
+    "use strict";
+    var n = r(575);
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", ({ matches: e }) => {
+        chrome.runtime.sendMessage({
+          type: n.SET_SCHEME,
+          scheme: e ? "dark" : "light",
+        });
+      });
+  },
 });
