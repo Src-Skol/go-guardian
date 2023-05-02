@@ -6,7 +6,7 @@ The n function takes an argument o. It checks whether t[o] is truthy, and if it 
 
 The n function is then used to define properties on itself. n.m is set to e, n.c is set to t, and n.d is set to a function that takes three arguments: e, t, and o. This function checks whether n.o(e, t) is falsy, and if it is, it defines a property on e with the name t and the specified configurable, enumerable, and getter attributes.
 
-The n.r function is defined to take an argument e and set the __esModule property on e to true. The n.n function is defined to take an argument e and return either the default export of e if it has a __esModule property that is truthy, or the value of e itself if not. The n.o function is defined to take two arguments e and t and return the result of calling Object.prototype.hasOwnProperty.call with e and t as arguments. n.p is set to an empty string. Finally, the self-executing function calls n with the argument 834.
+The n.r function is defined to take an argument e and set the **esModule property on e to true. The n.n function is defined to take an argument e and return either the default export of e if it has a **esModule property that is truthy, or the value of e itself if not. The n.o function is defined to take two arguments e and t and return the result of calling Object.prototype.hasOwnProperty.call with e and t as arguments. n.p is set to an empty string. Finally, the self-executing function calls n with the argument 834.
 
 Inside the object passed as the argument to the self-executing function, there is a key-value pair with the key 834 and a value that is a function. This function defines a number of variables and functions, and sets up event listeners.
 

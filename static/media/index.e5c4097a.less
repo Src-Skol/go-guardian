@@ -1,9 +1,9 @@
-@import '../../style/themes/index';
-@import '../../style/mixins/index';
+@import "../../style/themes/index";
+@import "../../style/mixins/index";
 
-@radio-prefix-cls: ~'@{ant-prefix}-radio';
-@radio-group-prefix-cls: ~'@{radio-prefix-cls}-group';
-@radio-inner-prefix-cls: ~'@{radio-prefix-cls}-inner';
+@radio-prefix-cls: ~"@{ant-prefix}-radio";
+@radio-group-prefix-cls: ~"@{radio-prefix-cls}-group";
+@radio-inner-prefix-cls: ~"@{radio-prefix-cls}-inner";
 @radio-duration: 0.3s;
 @radio-focus-shadow: 0 0 0 3px fade(@radio-dot-color, 8%);
 @radio-button-focus-shadow: @radio-focus-shadow;
@@ -19,7 +19,8 @@
     z-index: 1;
   }
 
-  > .@{ant-prefix}-badge:not(:first-child) > .@{radio-prefix-cls}-button-wrapper {
+  > .@{ant-prefix}-badge:not(:first-child)
+    > .@{radio-prefix-cls}-button-wrapper {
     border-left: none;
   }
 }
@@ -37,7 +38,7 @@
     display: inline-block;
     width: 0;
     overflow: hidden;
-    content: '\a0';
+    content: "\a0";
   }
 }
 
@@ -71,7 +72,7 @@
     visibility: hidden;
     animation: antRadioEffect 0.36s ease-in-out;
     animation-fill-mode: both;
-    content: '';
+    content: "";
   }
 
   &:hover::after,
@@ -94,7 +95,7 @@
       transform: scale(0);
       opacity: 0;
       transition: all @radio-duration @ease-in-out-circ;
-      content: ' ';
+      content: " ";
     }
 
     position: relative;
@@ -217,7 +218,7 @@ span.@{radio-prefix-cls} + * {
       padding: @border-width-base 0;
       background-color: @border-color-base;
       transition: background-color 0.3s;
-      content: '';
+      content: "";
     }
   }
 
@@ -244,8 +245,8 @@ span.@{radio-prefix-cls} + * {
   }
 
   .@{radio-prefix-cls}-inner,
-  input[type='checkbox'],
-  input[type='radio'] {
+  input[type="checkbox"],
+  input[type="radio"] {
     width: 0;
     height: 0;
     opacity: 0;
@@ -342,4 +343,4 @@ span.@{radio-prefix-cls} + * {
   }
 }
 
-@import './rtl';
+@import "./rtl";

@@ -1,0 +1,12 @@
+name: "Prettier format check"
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  check:
+    name: Check Prettier syntax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm i --no-save prettier
+      - run: npx prettier --check .

@@ -7,6 +7,3 @@ The function i has several conditional statements and function calls inside it. 
 There are multiple entries in the module, each with a numerical index. The code at each of these indices defines a function or an object.
 
 It is not clear what the purpose of this code is without more context.
-
-
-

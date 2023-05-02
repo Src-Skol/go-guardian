@@ -1,1 +1,139 @@
-{"name":"GoGuardian","version":"3.0.6444.2","manifest_version":2,"background":{"page":"background.html"},"browser_action":{"default_icon":{"16":"icons/static-light-16.png","32":"icons/static-light-32.png","48":"icons/static-light-48.png","128":"icons/static-light-128.png"},"default_title":"GoGuardian","default_popup":"popup.html"},"icons":{"16":"icons/static-light-16.png","32":"icons/static-light-32.png","48":"icons/static-light-48.png","128":"icons/static-light-128.png"},"key":"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPdMH1s/Pt9zfEC6GU2YAky8AtlEeTgKWRZPt5MNMRCz4tp1l5zVnNj12ZFT/7ujt7zND5JL5ucGlsQBSV6GlZHN/ZpP3n6RadQUsGG9IRjvxtUYh2h1hc1GMFAe+E3yLYC9NvgxRbOS3Xdphv0JwokgGXov2oJjledjctWGDluQIDAQAB","update_url":"https://staging-ext.goguardian.com/alpha.xml","content_security_policy":"script-src 'self' https://*.pusher.com 'unsafe-eval'; object-src 'self'","content_scripts":[{"matches":["<all_urls>"],"exclude_matches":["https://secure.aleks.com/*"],"js":["admin.js"],"run_at":"document_idle","all_frames":true},{"matches":["*://*.youtube.com/*","*://*.youtube.com./*","*://*.youtube-nocookie.com/*","*://*.youtube-nocookie.com./*","*://translate.googleusercontent.com/*"],"js":["youtube.js"],"run_at":"document_idle","all_frames":true},{"matches":["<all_urls>"],"exclude_matches":["https://secure.aleks.com/*"],"js":["teacher.js"],"run_at":"document_idle","all_frames":false},{"matches":["<all_urls>"],"exclude_matches":["https://secure.aleks.com/*"],"js":["miner.js"],"run_at":"document_idle","all_frames":true},{"matches":["<all_urls>"],"exclude_matches":["https://secure.aleks.com/*"],"js":["imageFilter.js"],"run_at":"document_idle","all_frames":true},{"matches":["<all_urls>"],"exclude_matches":["https://secure.aleks.com/*"],"js":["privacy.js"],"run_at":"document_idle","all_frames":false},{"matches":["https://meet.google.com/*"],"js":["meetPrivacy.js"],"run_at":"document_start","all_frames":false},{"matches":["<all_urls>"],"js":["annotate.js"],"run_at":"document_idle","all_frames":false},{"matches":["<all_urls>"],"js":["scheme.js"],"run_at":"document_start"},{"matches":["*://docs.google.com/*"],"js":["googleDocsHtmlFallback.js"],"run_at":"document_start"}],"permissions":["cookies","geolocation","history","idle","management","storage","tabs","webRequest","webRequestBlocking","activeTab","http://*/*","https://*/*","<all_urls>","identity","identity.email","webNavigation","notifications","enterprise.deviceAttributes","pageCapture","alarms","system.memory","system.cpu","nativeMessaging","background"],"web_accessible_resources":["teacher/*","beacon/*","x3/*","avro/*/*","privacy/*","youtube_injection.js","blocked.svg"],"externally_connectable":{"ids":["fobcbbhcfonjdomhmmjhbnchobfebhfp"],"matches":["https://*.goguardian.com/*","https://extension.goguardian/*","http://localhost:5022/*"]}}
+{
+  "name": "GoGuardian",
+  "version": "3.0.6444.2",
+  "manifest_version": 2,
+  "background": { "page": "background.html" },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/static-light-16.png",
+      "32": "icons/static-light-32.png",
+      "48": "icons/static-light-48.png",
+      "128": "icons/static-light-128.png"
+    },
+    "default_title": "GoGuardian",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons/static-light-16.png",
+    "32": "icons/static-light-32.png",
+    "48": "icons/static-light-48.png",
+    "128": "icons/static-light-128.png"
+  },
+  "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPdMH1s/Pt9zfEC6GU2YAky8AtlEeTgKWRZPt5MNMRCz4tp1l5zVnNj12ZFT/7ujt7zND5JL5ucGlsQBSV6GlZHN/ZpP3n6RadQUsGG9IRjvxtUYh2h1hc1GMFAe+E3yLYC9NvgxRbOS3Xdphv0JwokgGXov2oJjledjctWGDluQIDAQAB",
+  "update_url": "https://staging-ext.goguardian.com/alpha.xml",
+  "content_security_policy": "script-src 'self' https://*.pusher.com 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["https://secure.aleks.com/*"],
+      "js": ["admin.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.youtube.com./*",
+        "*://*.youtube-nocookie.com/*",
+        "*://*.youtube-nocookie.com./*",
+        "*://translate.googleusercontent.com/*"
+      ],
+      "js": ["youtube.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["https://secure.aleks.com/*"],
+      "js": ["teacher.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["https://secure.aleks.com/*"],
+      "js": ["miner.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["https://secure.aleks.com/*"],
+      "js": ["imageFilter.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["https://secure.aleks.com/*"],
+      "js": ["privacy.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["meetPrivacy.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["annotate.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scheme.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["*://docs.google.com/*"],
+      "js": ["googleDocsHtmlFallback.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "cookies",
+    "geolocation",
+    "history",
+    "idle",
+    "management",
+    "storage",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "activeTab",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>",
+    "identity",
+    "identity.email",
+    "webNavigation",
+    "notifications",
+    "enterprise.deviceAttributes",
+    "pageCapture",
+    "alarms",
+    "system.memory",
+    "system.cpu",
+    "nativeMessaging",
+    "background"
+  ],
+  "web_accessible_resources": [
+    "teacher/*",
+    "beacon/*",
+    "x3/*",
+    "avro/*/*",
+    "privacy/*",
+    "youtube_injection.js",
+    "blocked.svg"
+  ],
+  "externally_connectable": {
+    "ids": ["fobcbbhcfonjdomhmmjhbnchobfebhfp"],
+    "matches": [
+      "https://*.goguardian.com/*",
+      "https://extension.goguardian/*",
+      "http://localhost:5022/*"
+    ]
+  }
+}

@@ -1,9 +1,9 @@
-const DEFAULT_MESSAGE = 'This content has been blocked.';
+const DEFAULT_MESSAGE = "This content has been blocked.";
 
 function setMessage(msg) {
-  const messageNode = document.getElementById('message');
+  const messageNode = document.getElementById("message");
   messageNode.textContent = msg;
-  messageNode.className = 'show';
+  messageNode.className = "show";
 }
 
 function load() {
@@ -14,7 +14,7 @@ function load() {
     return;
   }
 
-  const triggerId = parseInt(triggerIdStr.replace('#', ''), 10);
+  const triggerId = parseInt(triggerIdStr.replace("#", ""), 10);
 
   if (isNaN(triggerId) || triggerId <= 0) {
     setMessage(DEFAULT_MESSAGE);
@@ -23,7 +23,7 @@ function load() {
 
   chrome.runtime.sendMessage(
     {
-      type: 'GET_BLOCK_TRIGGER_MESSAGE',
+      type: "GET_BLOCK_TRIGGER_MESSAGE",
       payload: {
         triggerId,
       },
